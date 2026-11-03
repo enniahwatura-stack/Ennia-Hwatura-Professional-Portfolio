@@ -55,12 +55,34 @@ nav a {
 .hero {
   background: linear-gradient(120deg, #142238, #30435e);
   color: white;
-  padding: 95px 7%;
+  padding: 75px 7%;
 }
 
 .hero-content, main {
   max-width: 1150px;
   margin: auto;
+}
+
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 55px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.profile-photo {
+  width: 290px;
+  height: 290px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 6px solid var(--gold);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+  flex-shrink: 0;
 }
 
 .eyebrow {
@@ -211,8 +233,31 @@ footer {
 @media(max-width: 750px) {
   nav { align-items: flex-start; }
   nav a { margin: 0 12px 0 0; }
+
   .grid { grid-template-columns: 1fr; }
-  .hero { padding: 65px 7%; }
+
+  .hero { padding: 55px 7%; }
+
+  .hero-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .profile-photo {
+    width: 210px;
+    height: 210px;
+  }
+
+  .hero-text h1 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-text p {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 </style>
 </head>
@@ -233,12 +278,22 @@ footer {
 </header>
 
 <div class="hero">
-<div class="hero-content">
+<div class="hero-content hero-layout">
+
+<div class="hero-text">
 <div class="eyebrow">Professional Portfolio</div>
 <h1>Business Strategy. People Development. Commercial Growth.</h1>
 <p>Senior Business Strategist and Human Resources Professional with 26+ years of experience across telecommunications, mobile financial services, logistics, insurance, manufacturing, banking and consulting.</p>
 <a class="button" href="#career">Explore My Experience</a>
 <a class="button" href="#contact">Connect With Me</a>
+</div>
+
+<img
+  src="Ennia%20profile%20pic.jpeg"
+  alt="Professional portrait of Ennia Hwatura"
+  class="profile-photo"
+>
+
 </div>
 </div>
 
