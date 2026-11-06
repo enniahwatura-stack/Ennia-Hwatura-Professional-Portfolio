@@ -2,275 +2,307 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ennia Hwatura | Senior Business Strategist, Human Resources, Sales and Marketing, Customer Experience.">
-  <title>Ennia Hwatura | Professional Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ennia Hwatura | Senior Business Strategist, Human Resources, Sales and Marketing, Customer Experience.">
+<title>Ennia Hwatura | Professional Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --navy: #101f35;
-      --navy-light: #1b304c;
-      --gold: #c6a15b;
-      --gold-light: #e3cc9d;
-      --cream: #f7f5f0;
-      --white: #ffffff;
-      --text: #273449;
-      --muted: #687589;
-      --border: #e6e2d9;
-      --shadow: 0 14px 40px rgba(16,31,53,.08);
-    }
+<style>
+:root {
+  --navy: #101f35;
+  --navy-light: #1b304c;
+  --gold: #c6a15b;
+  --gold-light: #e3cc9d;
+  --cream: #f7f5f0;
+  --white: #ffffff;
+  --text: #273449;
+  --muted: #687589;
+  --border: #e6e2d9;
+  --shadow: 0 14px 40px rgba(16,31,53,.08);
+}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body { font-family: "DM Sans", sans-serif; color: var(--text); background: var(--cream); line-height: 1.7; }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, 90%); margin: auto; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "DM Sans", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.7;
+}
+a { color: inherit; text-decoration: none; }
+.container { width: min(1120px, 90%); margin: auto; }
 
-    header {
-      background: rgba(16,31,53,.97);
-      color: var(--white);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-      box-shadow: 0 4px 20px rgba(0,0,0,.12);
-    }
+header {
+  background: rgba(16,31,53,.97);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,.12);
+}
+.nav {
+  min-height: 76px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.45rem;
+  color: var(--gold-light);
+  font-weight: 700;
+  white-space: nowrap;
+}
+nav { display: flex; align-items: center; gap: 23px; flex-wrap: wrap; }
+nav a { font-size: .82rem; color: #e8edf4; transition: color .2s; }
+nav a:hover { color: var(--gold-light); }
 
-    .nav {
-      min-height: 76px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-    }
+.hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(198,161,91,.16), transparent 28%),
+    linear-gradient(125deg, var(--navy), var(--navy-light));
+  color: var(--white);
+  padding: 100px 0 92px;
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.5fr .8fr;
+  align-items: center;
+  gap: 65px;
+}
+.eyebrow, .section-label {
+  color: var(--gold-light);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: .76rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  line-height: 1.08;
+  margin-bottom: 20px;
+}
+.hero h2 { color: var(--gold-light); font-size: 1.03rem; font-weight: 600; margin-bottom: 12px; }
+.experience-line {
+  color: #e8d7b6;
+  font-size: .88rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 22px;
+}
+.hero-copy { color: #d8e0eb; max-width: 680px; font-size: 1.02rem; margin-bottom: 30px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 13px; }
+.btn {
+  display: inline-block;
+  padding: 12px 22px;
+  border-radius: 4px;
+  font-size: .88rem;
+  font-weight: 700;
+  transition: .2s ease;
+}
+.btn-gold { background: var(--gold); color: var(--navy); }
+.btn-gold:hover { background: var(--gold-light); }
+.btn-outline { border: 1px solid rgba(255,255,255,.65); color: var(--white); }
+.btn-outline:hover { background: var(--white); color: var(--navy); }
 
-    .brand {
-      font-family: "Playfair Display", serif;
-      font-size: 1.45rem;
-      color: var(--gold-light);
-      font-weight: 700;
-      white-space: nowrap;
-    }
+.profile-frame {
+  border: 1px solid rgba(227,204,157,.7);
+  padding: 12px;
+  max-width: 340px;
+  margin-left: auto;
+  background: rgba(255,255,255,.04);
+}
+.profile-frame img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  background: #d9dce1;
+}
 
-    nav { display: flex; align-items: center; gap: 23px; flex-wrap: wrap; }
-    nav a { font-size: .82rem; color: #e8edf4; transition: color .2s; }
-    nav a:hover { color: var(--gold-light); }
+section { padding: 82px 0; }
+.section-heading { margin-bottom: 36px; max-width: 760px; }
+.section-label {
+  color: #9b783c;
+  letter-spacing: 2.5px;
+  font-size: .72rem;
+  margin-bottom: 9px;
+}
+h2.section-title {
+  color: var(--navy);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.2;
+  margin-bottom: 13px;
+}
+.section-intro { color: var(--muted); max-width: 760px; }
 
-    .hero {
-      background:
-        radial-gradient(circle at 85% 20%, rgba(198,161,91,.16), transparent 28%),
-        linear-gradient(125deg, var(--navy), var(--navy-light));
-      color: var(--white);
-      padding: 100px 0 92px;
-    }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 45px;
+  align-items: start;
+}
+.about-copy p { margin-bottom: 16px; }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.5fr .8fr;
-      align-items: center;
-      gap: 65px;
-    }
+.highlight-card {
+  background: var(--navy);
+  color: var(--white);
+  padding: 30px;
+  border-top: 4px solid var(--gold);
+  box-shadow: var(--shadow);
+}
+.highlight-card h3 {
+  font-family: "Playfair Display", serif;
+  color: var(--gold-light);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+.highlight-card ul { padding-left: 19px; color: #e0e6ee; }
+.highlight-card li { margin: 9px 0; }
 
-    .eyebrow, .section-label {
-      color: var(--gold-light);
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      font-size: .76rem;
-      font-weight: 700;
-      margin-bottom: 18px;
-    }
+.metrics {
+  background: var(--white);
+  padding: 36px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 20px;
+  text-align: center;
+}
+.metric strong {
+  display: block;
+  color: var(--navy);
+  font-family: "Playfair Display",serif;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+.metric span { color: var(--muted); font-size: .83rem; }
+.soft-section { background: #efede7; }
 
-    h1 {
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2.8rem, 6vw, 4.8rem);
-      line-height: 1.08;
-      margin-bottom: 20px;
-    }
+.skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
+.skill-card {
+  background: var(--white);
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--gold);
+}
+.skill-card h3 { color: var(--navy); font-size: 1.02rem; margin-bottom: 10px; }
+.skill-card p { color: var(--muted); font-size: .9rem; }
 
-    .hero h2 { color: var(--gold-light); font-size: 1.03rem; font-weight: 600; margin-bottom: 12px; }
-    .experience-line { color: #e8d7b6; font-size: .88rem; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 22px; }
-    .hero-copy { color: #d8e0eb; max-width: 680px; font-size: 1.02rem; margin-bottom: 30px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 13px; }
+.timeline {
+  position: relative;
+  margin-left: 8px;
+  padding-left: 30px;
+  border-left: 2px solid #d8c49e;
+}
+.job {
+  position: relative;
+  margin-bottom: 35px;
+  background: var(--white);
+  padding: 27px 30px;
+  border: 1px solid var(--border);
+  box-shadow: 0 7px 22px rgba(16,31,53,.035);
+}
+.job::before {
+  content: "";
+  position: absolute;
+  left: -39px;
+  top: 30px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--cream);
+}
+.job h3 { color: var(--navy); font-size: 1.12rem; line-height: 1.4; }
+.job-meta { color: #99743a; font-weight: 700; font-size: .86rem; margin: 5px 0 13px; }
+.job ul { padding-left: 19px; color: var(--muted); font-size: .93rem; }
+.job li { margin: 7px 0; }
 
-    .btn {
-      display: inline-block;
-      padding: 12px 22px;
-      border-radius: 4px;
-      font-size: .88rem;
-      font-weight: 700;
-      transition: .2s ease;
-    }
+.earlier-career {
+  background: #f1eee7;
+  border-left: 4px solid var(--gold);
+  padding: 26px 30px;
+  margin-top: 15px;
+}
+.earlier-career h3 { color: var(--navy); margin-bottom: 10px; }
+.earlier-career p, .earlier-career li { color: var(--muted); font-size: .93rem; }
+.earlier-career ul { padding-left: 20px; margin: 8px 0 18px; }
 
-    .btn-gold { background: var(--gold); color: var(--navy); }
-    .btn-gold:hover { background: var(--gold-light); }
-    .btn-outline { border: 1px solid rgba(255,255,255,.65); color: var(--white); }
-    .btn-outline:hover { background: var(--white); color: var(--navy); }
+.education-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+.education-card { background: var(--white); padding: 25px; border: 1px solid var(--border); }
+.education-card h3 { color: var(--navy); font-size: 1rem; margin-bottom: 7px; }
+.education-card p { color: var(--muted); font-size: .9rem; }
 
-    .profile-frame {
-      border: 1px solid rgba(227,204,157,.7);
-      padding: 12px;
-      max-width: 340px;
-      margin-left: auto;
-      background: rgba(255,255,255,.04);
-    }
+.cert-list, .tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
+.cert {
+  background: var(--white);
+  color: var(--navy);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 9px 14px;
+  font-size: .83rem;
+}
+.tool { background: var(--navy); color: var(--white); padding: 9px 15px; border-radius: 3px; font-size: .83rem; }
 
-    .profile-frame img {
-      width: 100%;
-      display: block;
-      aspect-ratio: 4 / 5;
-      object-fit: cover;
-      object-position: center;
-      background: #d9dce1;
-    }
+.achievement-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+.achievement {
+  background: var(--white);
+  padding: 23px;
+  border-left: 3px solid var(--gold);
+  box-shadow: 0 5px 20px rgba(16,31,53,.04);
+}
+.achievement p { color: var(--muted); font-size: .92rem; }
 
-    section { padding: 82px 0; }
+.contact { background: var(--navy); color: var(--white); }
+.contact .section-title { color: var(--white); }
+.contact .section-intro { color: #d5deea; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 30px; }
+.contact-item { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+.contact-item span {
+  display: block;
+  color: var(--gold-light);
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 5px;
+}
+.contact-item a, .contact-item p { color: #f0f3f7; overflow-wrap: anywhere; }
+.references-note { margin-top: 25px; color: #d5deea; font-size: .9rem; }
 
-    .section-heading { margin-bottom: 36px; max-width: 760px; }
-    .section-label { color: #9b783c; letter-spacing: 2.5px; font-size: .72rem; margin-bottom: 9px; }
+footer { background: #0b1728; color: #c7d0dc; text-align: center; padding: 22px 15px; font-size: .8rem; }
 
-    h2.section-title {
-      color: var(--navy);
-      font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 4vw, 2.8rem);
-      line-height: 1.2;
-      margin-bottom: 13px;
-    }
-
-    .section-intro { color: var(--muted); max-width: 760px; }
-
-    .about-grid { display: grid; grid-template-columns: 1.2fr .8fr; gap: 45px; align-items: start; }
-    .about-copy p { margin-bottom: 16px; }
-
-    .highlight-card {
-      background: var(--navy);
-      color: var(--white);
-      padding: 30px;
-      border-top: 4px solid var(--gold);
-      box-shadow: var(--shadow);
-    }
-
-    .highlight-card h3 {
-      font-family: "Playfair Display", serif;
-      color: var(--gold-light);
-      font-size: 1.4rem;
-      margin-bottom: 15px;
-    }
-
-    .highlight-card ul { padding-left: 19px; color: #e0e6ee; }
-    .highlight-card li { margin: 9px 0; }
-
-    .metrics {
-      background: var(--white);
-      padding: 36px 0;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .metric-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 20px; text-align: center; }
-    .metric strong { display: block; color: var(--navy); font-family: "Playfair Display",serif; font-size: 2.5rem; line-height: 1.2; }
-    .metric span { color: var(--muted); font-size: .83rem; }
-    .soft-section { background: #efede7; }
-
-    .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 18px; }
-
-    .skill-card {
-      background: var(--white);
-      padding: 24px;
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--gold);
-    }
-
-    .skill-card h3 { color: var(--navy); font-size: 1.02rem; margin-bottom: 10px; }
-    .skill-card p { color: var(--muted); font-size: .9rem; }
-
-    .timeline { position: relative; margin-left: 8px; padding-left: 30px; border-left: 2px solid #d8c49e; }
-
-    .job {
-      position: relative;
-      margin-bottom: 35px;
-      background: var(--white);
-      padding: 27px 30px;
-      border: 1px solid var(--border);
-      box-shadow: 0 7px 22px rgba(16,31,53,.035);
-    }
-
-    .job::before {
-      content: "";
-      position: absolute;
-      left: -39px;
-      top: 30px;
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--gold);
-      border: 3px solid var(--cream);
-    }
-
-    .job h3 { color: var(--navy); font-size: 1.12rem; line-height: 1.4; }
-    .job-meta { color: #99743a; font-weight: 700; font-size: .86rem; margin: 5px 0 13px; }
-    .job ul { padding-left: 19px; color: var(--muted); font-size: .93rem; }
-    .job li { margin: 7px 0; }
-
-    .earlier-career {
-      background: #f1eee7;
-      border-left: 4px solid var(--gold);
-      padding: 26px 30px;
-      margin-top: 15px;
-    }
-
-    .earlier-career h3 { color: var(--navy); margin-bottom: 10px; }
-    .earlier-career p, .earlier-career li { color: var(--muted); font-size: .93rem; }
-    .earlier-career ul { padding-left: 20px; margin: 8px 0 18px; }
-
-    .education-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
-
-    .education-card { background: var(--white); padding: 25px; border: 1px solid var(--border); }
-    .education-card h3 { color: var(--navy); font-size: 1rem; margin-bottom: 7px; }
-    .education-card p { color: var(--muted); font-size: .9rem; }
-
-    .cert-list, .tools { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px; }
-    .cert { background: var(--white); color: var(--navy); border: 1px solid var(--border); border-radius: 3px; padding: 9px 14px; font-size: .83rem; }
-    .tool { background: var(--navy); color: var(--white); padding: 9px 15px; border-radius: 3px; font-size: .83rem; }
-
-    .achievement-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
-    .achievement { background: var(--white); padding: 23px; border-left: 3px solid var(--gold); box-shadow: 0 5px 20px rgba(16,31,53,.04); }
-    .achievement p { color: var(--muted); font-size: .92rem; }
-
-    .contact { background: var(--navy); color: var(--white); }
-    .contact .section-title { color: var(--white); }
-    .contact .section-intro { color: #d5deea; }
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 35px; margin-top: 30px; }
-    .contact-item { padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,.16); }
-    .contact-item span { display: block; color: var(--gold-light); font-size: .75rem; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 5px; }
-    .contact-item a, .contact-item p { color: #f0f3f7; overflow-wrap: anywhere; }
-    .references-note { margin-top: 25px; color: #d5deea; font-size: .9rem; }
-
-    footer { background: #0b1728; color: #c7d0dc; text-align: center; padding: 22px 15px; font-size: .8rem; }
-
-    @media (max-width:850px) {
-      .hero-grid, .about-grid { grid-template-columns: 1fr; }
-      .profile-frame { margin: 0; max-width: 290px; }
-      .skills-grid { grid-template-columns: repeat(2,1fr); }
-      nav { gap: 12px; }
-      nav a { font-size: .75rem; }
-    }
-
-    @media (max-width:600px) {
-      .nav { padding: 15px 0; align-items: flex-start; flex-direction: column; }
-      nav { gap: 10px 16px; }
-      .hero { padding: 65px 0; }
-      section { padding: 60px 0; }
-      .metric-grid { grid-template-columns: repeat(2,1fr); row-gap: 25px; }
-      .skills-grid, .education-grid, .achievement-grid, .contact-grid { grid-template-columns: 1fr; }
-      .job { padding: 22px 20px; }
-      .timeline { padding-left: 22px; }
-      .job::before { left: -31px; }
-    }
-  </style>
+@media (max-width:850px) {
+  .hero-grid, .about-grid { grid-template-columns: 1fr; }
+  .profile-frame { margin: 0; max-width: 290px; }
+  .skills-grid { grid-template-columns: repeat(2,1fr); }
+  nav { gap: 12px; }
+  nav a { font-size: .75rem; }
+}
+@media (max-width:600px) {
+  .nav { padding: 15px 0; align-items: flex-start; flex-direction: column; }
+  nav { gap: 10px 16px; }
+  .hero { padding: 65px 0; }
+  section { padding: 60px 0; }
+  .metric-grid { grid-template-columns: repeat(2,1fr); row-gap: 25px; }
+  .skills-grid, .education-grid, .achievement-grid, .contact-grid { grid-template-columns: 1fr; }
+  .job { padding: 22px 20px; }
+  .timeline { padding-left: 22px; }
+  .job::before { left: -31px; }
+}
+</style>
 </head>
 
 <body>
@@ -289,256 +321,330 @@
 </header>
 
 <main>
-  <section class="hero" id="home">
-    <div class="container hero-grid">
-      <div>
-        <p class="eyebrow">Professional Portfolio</p>
-        <h1>Ennia Hwatura</h1>
-        <h2>Senior Business Strategist | Human Resources | Sales &amp; Marketing | Customer Experience</h2>
-        <p class="experience-line">15+ YEARS OF PROGRESSIVE RELEVANT EXPERIENCE</p>
-        <p class="hero-copy">
-          A results-driven business and people management professional combining strategic thinking,
-          commercial awareness and hands-on operational expertise. Passionate about developing people,
-          strengthening customer relationships and creating practical solutions that support sustainable
-          business growth.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-gold" href="#experience">Explore My Experience</a>
-          <a class="btn btn-outline" href="Ennia_Hwatura_Full_Public_CV.pdf" target="_blank" rel="noopener">
-            Download My CV
-          </a>
-          <a class="btn btn-outline" href="#contact">Get In Touch</a>
-        </div>
-      </div>
-      <div class="profile-frame">
-        <img src="Ennia%20profile%20pic.jpeg" alt="Professional portrait of Ennia Hwatura">
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <p class="eyebrow">Professional Portfolio</p>
+      <h1>Ennia Hwatura</h1>
+      <h2>Senior Business Strategist | Human Resources | Sales &amp; Marketing | Customer Experience</h2>
+      <p class="experience-line">15+ YEARS OF PROGRESSIVE RELEVANT EXPERIENCE</p>
+      <p class="hero-copy">
+        A results-driven business and people management professional combining strategic thinking,
+        commercial awareness and hands-on operational expertise. Experienced in developing teams,
+        strengthening customer relationships and creating practical solutions that support sustainable
+        business growth.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-gold" href="#experience">Explore My Experience</a>
+        <a class="btn btn-outline" href="Ennia_Hwatura_Full_Public_CV.pdf" target="_blank" rel="noopener">Download My CV</a>
+        <a class="btn btn-outline" href="#contact">Get In Touch</a>
       </div>
     </div>
-  </section>
-
-  <section id="about">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label">Professional Profile</p>
-        <h2 class="section-title">Business Strategy. People. Performance.</h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>A results-driven business and people management professional with 15+ years of progressive, relevant experience across Human Resources, Customer Experience, Sales and Marketing, Business Development, Training and Business Operations, built on an early-career foundation in customer care and workplace safety.</p>
-          <p>Combines strategic thinking with hands-on operational expertise, commercial awareness and a strong understanding of telecommunications, digital financial services, retail, manufacturing and consulting.</p>
-          <p>Demonstrated ability to develop teams, strengthen customer and stakeholder relationships, improve operational performance and use data to support sound commercial and people decisions.</p>
-        </div>
-        <aside class="highlight-card">
-          <h3>My Professional Approach</h3>
-          <ul>
-            <li>People-centred leadership and talent development</li>
-            <li>Customer-focused commercial execution</li>
-            <li>Evidence-based business decision-making</li>
-            <li>Operational improvement and accountability</li>
-            <li>Collaborative stakeholder engagement</li>
-          </ul>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <div class="metrics">
-    <div class="container metric-grid">
-      <div class="metric"><strong>200+</strong><span>Strategic retail and institutional clients</span></div>
-      <div class="metric"><strong>100</strong><span>Brand ambassadors supervised</span></div>
-      <div class="metric"><strong>60%</strong><span>Transaction volume growth within 12 months</span></div>
-      <div class="metric"><strong>25</strong><span>Regional team leaders coached</span></div>
+    <div class="profile-frame">
+      <img src="Ennia%20profile%20pic.jpeg" alt="Professional portrait of Ennia Hwatura">
     </div>
   </div>
+</section>
 
-  <section class="soft-section" id="expertise">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label">Core Competencies</p>
-        <h2 class="section-title">Areas of Expertise</h2>
-        <p class="section-intro">A multidisciplinary skill set spanning people management, commercial growth, customer experience and business operations.</p>
-      </div>
-      <div class="skills-grid">
-        <article class="skill-card"><h3>Human Resources Management</h3><p>Talent acquisition, recruitment and selection, employee relations, performance management, HR auditing and workforce development.</p></article>
-        <article class="skill-card"><h3>Sales and Business Development</h3><p>Sales strategy, business development, merchant management, account growth, trade marketing and commercial execution.</p></article>
-        <article class="skill-card"><h3>Customer Experience</h3><p>Customer care, service excellence, CRM, customer retention, stakeholder engagement and relationship management.</p></article>
-        <article class="skill-card"><h3>Learning and Development</h3><p>Training needs analysis, learning programmes, coaching, product knowledge and employee capability development.</p></article>
-        <article class="skill-card"><h3>Business Intelligence</h3><p>Market intelligence, reporting and analytics, performance monitoring, business insights and data-informed decisions.</p></article>
-        <article class="skill-card"><h3>Business Operations</h3><p>Strategic planning, compliance, risk management, process improvement, operational coordination and organisational effectiveness.</p></article>
-      </div>
+<section id="about">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">Professional Profile</p>
+      <h2 class="section-title">Business Strategy. People. Performance.</h2>
     </div>
-  </section>
-
-  <section id="experience">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label">Career Journey</p>
-        <h2 class="section-title">Professional Experience</h2>
-        <p class="section-intro">Progressive experience across telecommunications, digital financial services, retail, manufacturing and business consulting.</p>
+    <div class="about-grid">
+      <div class="about-copy">
+        <p>A results-driven business and people management professional with 15+ years of progressive, relevant experience across Human Resources, Customer Experience, Sales and Marketing, Business Development, Training and Business Operations, built on an early-career foundation in customer care and workplace safety.</p>
+        <p>Combines strategic thinking with hands-on operational expertise, commercial awareness and a strong understanding of telecommunications, digital financial services, retail, manufacturing and consulting.</p>
+        <p>Demonstrated ability to develop teams, strengthen customer and stakeholder relationships, improve operational performance and use data to support sound commercial and people decisions.</p>
       </div>
-
-      <div class="timeline">
-        <article class="job">
-          <h3>HR and Strategy Specialist (Freelance)</h3>
-          <p class="job-meta">Nadoc Investments Bakery | October 2025 – April 2026</p>
-          <ul>
-            <li>Partnered with leadership on HR, organisational effectiveness and business operations across a growing bakery and confectionery business.</li>
-            <li>Conducted HR and operational reviews, identifying gaps in employee records, policies, processes, organisational systems and controls.</li>
-            <li>Supported recruitment, workforce planning, employee relations, performance management and staff development.</li>
-            <li>Contributed to business strategy, sales and marketing plans, route-to-market execution, transport and logistics coordination.</li>
-            <li>Developed practical training and process improvements to strengthen workforce capability and operational consistency.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Team Leader and Training Specialist</h3>
-          <p class="job-meta">EcoCash Holdings (Pvt) Ltd | August 2024 – May 2025</p>
-          <ul>
-            <li>Supported merchant acquisition, client engagement and relationship management across digital payments services.</li>
-            <li>Conducted market and consumer research to identify opportunities across retail, government and commercial segments.</li>
-            <li>Produced marketing performance and business intelligence reports to support commercial decisions.</li>
-            <li>Designed and delivered product, process and customer service training for employees, partners and customers.</li>
-            <li>Supervised and coached a field network of 100 brand ambassadors, aligning field activity and performance with regional sales priorities.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Regional Account Executive and Merchant Payments Manager</h3>
-          <p class="job-meta">EcoCash Holdings (Pvt) Ltd | May 2023 – July 2024</p>
-          <ul>
-            <li>Managed relationships across a portfolio of more than 200 strategic retail and institutional clients, achieving 60% growth in transaction volume within 12 months.</li>
-            <li>Developed merchant segmentation and account plans to prioritise high-value relationships and growth opportunities.</li>
-            <li>Used Power BI dashboards and relationship reviews to monitor account health, identify risks and support proactive retention.</li>
-            <li>Coached 25 regional team leaders, strengthening customer centricity, sales discipline and performance accountability.</li>
-            <li>Secured and developed business across government departments and national retail chains through stakeholder engagement and tailored solutions.</li>
-            <li>Led sales activations, loyalty initiatives and cross-selling campaigns; prepared forecasts, competitor intelligence and performance reports.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Trade Marketing and Training Officer</h3>
-          <p class="job-meta">Cassava Smartech (Pvt) Ltd | September 2016 – April 2023</p>
-          <ul>
-            <li>Used market research and consumer insights to inform sales, marketing and customer engagement strategies.</li>
-            <li>Developed brand positioning, merchandising approaches and go-to-market plans informed by market conditions.</li>
-            <li>Facilitated product knowledge and customer engagement training and monitored market trends.</li>
-            <li>Tracked campaign performance against KPIs and used customer feedback to improve marketing effectiveness.</li>
-            <li>Supported product development and launches, aligning commercial execution with customer needs and sales targets.</li>
-            <li>Built relationships with retail partners and distribution channels to support market expansion.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Talent Development Officer</h3>
-          <p class="job-meta">Econet Wireless (Pvt) Ltd | October 2013 – July 2016</p>
-          <ul>
-            <li>Supported recruitment, onboarding and talent development initiatives for sales and marketing operations.</li>
-            <li>Conducted performance reviews and KPI analysis to identify capability gaps and development priorities.</li>
-            <li>Developed and facilitated training in CRM systems, service excellence, marketing analytics and role-specific capability.</li>
-            <li>Supported performance improvement through coaching, structured learning and employee development plans.</li>
-          </ul>
-        </article>
-
-        <article class="job">
-          <h3>Human Resources Assistant</h3>
-          <p class="job-meta">Econet Wireless (Pvt) Ltd | March 2011 – September 2013</p>
-          <ul>
-            <li>Supported recruitment and selection, employee documentation and day-to-day HR administration.</li>
-            <li>Assisted with labour relations activities and implementation of HR policies and procedures.</li>
-            <li>Supported workforce data analysis, HR reporting, compliance and employee-related processes.</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="earlier-career">
-        <p class="section-label">Earlier Career Foundation | 2000 – 2011</p>
-        <h3>Econet Wireless (Pvt) Ltd</h3>
+      <aside class="highlight-card">
+        <h3>My Professional Approach</h3>
         <ul>
-          <li>Customer Care Consultant | February 2009 – February 2011</li>
-          <li>Contact Centre Operator | 2002 – 2009</li>
+          <li>People-centred leadership and talent development</li>
+          <li>Customer-focused commercial execution</li>
+          <li>Evidence-based business decision-making</li>
+          <li>Operational improvement and accountability</li>
+          <li>Collaborative stakeholder engagement</li>
         </ul>
-        <p>Built a strong foundation in customer relationship management, service delivery, retention and staff development. Recognised for strong performance and subsequently entrusted with customer service training responsibilities.</p>
-        <h3 style="margin-top:22px;">Omnia Fertilizer</h3>
-        <ul><li>Safety, Health and Environment Officer</li></ul>
-        <p>Contributed to the establishment and development of the organisation's Safety, Health and Environment function.</p>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<div class="metrics">
+  <div class="container metric-grid">
+    <div class="metric"><strong>200+</strong><span>Strategic retail and institutional clients</span></div>
+    <div class="metric"><strong>100</strong><span>Brand ambassadors supervised</span></div>
+    <div class="metric"><strong>60%</strong><span>Transaction volume growth within 12 months</span></div>
+    <div class="metric"><strong>25</strong><span>Regional team leaders coached</span></div>
+  </div>
+</div>
+
+<section class="soft-section" id="expertise">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">Core Competencies</p>
+      <h2 class="section-title">Areas of Expertise</h2>
+      <p class="section-intro">A multidisciplinary skill set spanning people management, commercial growth, customer experience and business operations.</p>
+    </div>
+    <div class="skills-grid">
+      <article class="skill-card">
+        <h3>Human Resources Management</h3>
+        <p>Talent acquisition, recruitment and selection, employee relations, performance management, HR auditing and workforce development.</p>
+      </article>
+      <article class="skill-card">
+        <h3>Sales and Business Development</h3>
+        <p>Sales strategy, business development, merchant management, account growth, trade marketing and commercial execution.</p>
+      </article>
+      <article class="skill-card">
+        <h3>Customer Experience</h3>
+        <p>Customer care, service excellence, CRM, customer retention, stakeholder engagement and relationship management.</p>
+      </article>
+      <article class="skill-card">
+        <h3>Learning and Development</h3>
+        <p>Training needs analysis, learning programmes, coaching, product knowledge and employee capability development.</p>
+      </article>
+      <article class="skill-card">
+        <h3>Business Intelligence</h3>
+        <p>Market intelligence, reporting and analytics, performance monitoring, business insights and data-informed decisions.</p>
+      </article>
+      <article class="skill-card">
+        <h3>Business Operations</h3>
+        <p>Strategic planning, compliance, risk management, process improvement, operational coordination and organisational effectiveness.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">Career Journey</p>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-intro">Progressive experience across telecommunications, digital financial services, retail, manufacturing, insurance services and business consulting.</p>
+    </div>
+
+    <div class="timeline">
+
+      <article class="job">
+        <h3>HR and Strategy Specialist (Freelance)</h3>
+        <p class="job-meta">Nadoc Investments | November 2025 – Present</p>
+        <ul>
+          <li>Partnered with leadership on HR, organisational effectiveness and business operations across a growing bakery and confectionery business.</li>
+          <li>Conducted HR and operational reviews, identifying gaps in employee records, policies, processes, organisational systems and controls.</li>
+          <li>Supported recruitment, workforce planning, employee relations, performance management and staff development.</li>
+          <li>Contributed to business strategy, sales and marketing plans, route-to-market execution, transport and logistics coordination.</li>
+          <li>Developed practical training and process improvements to strengthen workforce capability and operational consistency.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Qualifier</h3>
+        <p class="job-meta">Call Experts Canada | September 2025 – October 2025</p>
+        <ul>
+          <li>Conducted inbound and outbound call qualification, connecting customers with specialist Life Insurance Advisors.</li>
+          <li>Carried out cold calling, customer query handling and enquiry resolution.</li>
+          <li>Created awareness of Life Insurance products and facilitated connections with specialist advisors.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Team Leader and Training Specialist</h3>
+        <p class="job-meta">EcoCash Holdings (Pvt) Ltd | August 2024 – May 2025</p>
+        <ul>
+          <li>Supported merchant acquisition, client engagement and relationship management across digital payments services.</li>
+          <li>Conducted market and consumer research to identify opportunities across retail, government and commercial segments.</li>
+          <li>Produced marketing performance and business intelligence reports to support commercial decisions.</li>
+          <li>Designed and delivered product, process and customer service training for employees, partners and customers.</li>
+          <li>Supervised and coached a team of 100 brand ambassadors, aligning field activity and performance with regional sales priorities.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Regional Account Executive and Merchant Payments Manager</h3>
+        <p class="job-meta">EcoCash Holdings (Pvt) Ltd | May 2023 – July 2024</p>
+        <ul>
+          <li>Managed a portfolio of 200+ key retail merchants and institutional clients, achieving 60% growth in transaction volume within 12 months.</li>
+          <li>Developed merchant segmentation and account plans to prioritise high-value relationships and growth opportunities.</li>
+          <li>Used Power BI dashboards and relationship reviews to monitor account health, identify risks and support proactive retention.</li>
+          <li>Coached 25 regional team leaders, strengthening customer centricity, sales discipline and performance accountability.</li>
+          <li>Secured and developed business across government departments and national retail chains through stakeholder engagement and tailored solutions.</li>
+          <li>Led sales activations, loyalty initiatives and cross-selling campaigns; prepared forecasts, competitor intelligence and performance reports.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Trade Marketing and Training Officer</h3>
+        <p class="job-meta">Cassava Smartech (Pvt) Ltd | September 2016 – April 2023</p>
+        <ul>
+          <li>Used market research and consumer insights to inform sales, marketing and customer engagement strategies.</li>
+          <li>Developed brand positioning, merchandising approaches and go-to-market plans informed by market conditions.</li>
+          <li>Facilitated product knowledge and customer engagement training and monitored market trends.</li>
+          <li>Tracked campaign performance against KPIs and used customer feedback to improve marketing effectiveness.</li>
+          <li>Supported product development and launches, aligning commercial execution with customer needs and sales targets.</li>
+          <li>Built relationships with retail partners and distribution channels to support market expansion.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Talent Development Officer</h3>
+        <p class="job-meta">Econet Wireless (Pvt) Ltd | October 2013 – July 2016</p>
+        <ul>
+          <li>Supported recruitment, onboarding and talent development initiatives for sales and marketing operations.</li>
+          <li>Conducted performance reviews and KPI analysis to identify capability gaps and development priorities.</li>
+          <li>Developed and facilitated training in CRM systems, service excellence, marketing analytics and role-specific capability.</li>
+          <li>Supported performance improvement through coaching, structured learning and employee development plans.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <h3>Human Resources Assistant</h3>
+        <p class="job-meta">Econet Wireless (Pvt) Ltd | March 2011 – September 2013</p>
+        <ul>
+          <li>Supported recruitment and selection, employee documentation and day-to-day HR administration.</li>
+          <li>Assisted with labour relations activities and implementation of HR policies and procedures.</li>
+          <li>Supported workforce data analysis, HR reporting, compliance and employee-related processes.</li>
+        </ul>
+      </article>
+
+    </div>
+
+    <div class="earlier-career">
+      <p class="section-label">Earlier Career Foundation | 2000 – 2011</p>
+      <h3>Econet Wireless (Pvt) Ltd</h3>
+      <ul>
+        <li>Customer Care Consultant | February 2009 – February 2011</li>
+        <li>Contact Centre Operator | 2002 – 2009</li>
+      </ul>
+      <p>Built a strong foundation in customer relationship management, service delivery, retention and staff development. Recognised for strong performance and subsequently entrusted with customer service training responsibilities.</p>
+
+      <h3 style="margin-top:22px;">Omnia Fertilizer</h3>
+      <ul>
+        <li>Safety, Health and Environment Officer</li>
+      </ul>
+      <p>Contributed to the establishment and development of the organisation's Safety, Health and Environment function.</p>
+    </div>
+  </div>
+</section>
+
+<section class="soft-section" id="education">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">Academic Background</p>
+      <h2 class="section-title">Education and Professional Development</h2>
+    </div>
+
+    <div class="education-grid">
+      <article class="education-card">
+        <h3>Master of Business Administration (MBA)</h3>
+        <p>National University of Science and Technology (NUST)</p>
+      </article>
+      <article class="education-card">
+        <h3>Bachelor of Commerce in Human Resources Management</h3>
+        <p>University of South Africa (UNISA)</p>
+      </article>
+      <article class="education-card">
+        <h3>Google Data Analytics Certification</h3>
+        <p>Focus on Business Intelligence and Market Research</p>
+      </article>
+    </div>
+
+    <div style="margin-top:35px;">
+      <h3 style="color:var(--navy);">Certifications and Professional Development</h3>
+      <div class="cert-list">
+        <span class="cert">Strategic Human Resources Certifications</span>
+        <span class="cert">Certified Executive Personal Assistant and Project Management</span>
+        <span class="cert">Safety, Health and Environment Advisor</span>
+        <span class="cert">Basic Fire Fighting and First Aid</span>
+        <span class="cert">DELF French Language Diploma</span>
+        <span class="cert">Anti-Money Laundering and Countering the Financing of Terrorism (AML/CFT)</span>
       </div>
     </div>
-  </section>
 
-  <section class="soft-section" id="education">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label">Academic Background</p>
-        <h2 class="section-title">Education and Professional Development</h2>
+    <div style="margin-top:35px;">
+      <h3 style="color:var(--navy);">Digital and Business Tools</h3>
+      <div class="tools">
+        <span class="tool">Salesforce</span>
+        <span class="tool">Comviva</span>
+        <span class="tool">Power BI</span>
+        <span class="tool">Tableau</span>
+        <span class="tool">Oracle</span>
+        <span class="tool">PeopleSoft</span>
+        <span class="tool">Microsoft 365</span>
+        <span class="tool">SharePoint</span>
+        <span class="tool">Moodle</span>
       </div>
-      <div class="education-grid">
-        <article class="education-card"><h3>Master of Business Administration (MBA)</h3><p>National University of Science and Technology (NUST)</p></article>
-        <article class="education-card"><h3>Bachelor of Commerce in Human Resources Management</h3><p>University of South Africa (UNISA)</p></article>
-        <article class="education-card"><h3>Google Data Analytics Certification</h3><p>Focus on Business Intelligence and Market Research</p></article>
-      </div>
+    </div>
+  </div>
+</section>
 
-      <div style="margin-top:35px;">
-        <h3 style="color:var(--navy);">Certifications and Professional Development</h3>
-        <div class="cert-list">
-          <span class="cert">Strategic Human Resources Certifications</span>
-          <span class="cert">Certified Executive Personal Assistant and Project Management</span>
-          <span class="cert">Safety, Health and Environment Advisor</span>
-          <span class="cert">Basic Fire Fighting and First Aid</span>
-          <span class="cert">DELF French Language Diploma</span>
-          <span class="cert">AML/CFT Training</span>
+<section id="achievements">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">Professional Impact</p>
+      <h2 class="section-title">Selected Career Achievements</h2>
+    </div>
+
+    <div class="achievement-grid">
+      <article class="achievement">
+        <p>Managed 200+ strategic retail and institutional clients and achieved 60% transaction volume growth within 12 months.</p>
+      </article>
+      <article class="achievement">
+        <p>Coached 25 regional team leaders, strengthening customer centricity and sales performance.</p>
+      </article>
+      <article class="achievement">
+        <p>Supervised 100 brand ambassadors against regional sales priorities and KPIs.</p>
+      </article>
+      <article class="achievement">
+        <p>Designed and delivered product, process and customer service training for employees and partner teams.</p>
+      </article>
+      <article class="achievement">
+        <p>Used Power BI and business intelligence reporting to identify relationship health risks, commercial opportunities and performance trends.</p>
+      </article>
+      <article class="achievement">
+        <p>Combined HR, sales, marketing and operations expertise to support business growth, compliance and service excellence.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="section-heading">
+      <p class="section-label">Let's Connect</p>
+      <h2 class="section-title">Building Better Business Outcomes Together</h2>
+      <p class="section-intro">Open to opportunities and professional conversations across business strategy, Human Resources, Sales and Marketing, Customer Experience, Training and Business Operations.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div>
+        <div class="contact-item">
+          <span>Location</span>
+          <p>Harare, Zimbabwe</p>
+        </div>
+        <div class="contact-item">
+          <span>Telephone</span>
+          <a href="tel:+263772222078">+263 772 222 078</a>
         </div>
       </div>
-
-      <div style="margin-top:35px;">
-        <h3 style="color:var(--navy);">Digital and Business Tools</h3>
-        <div class="tools">
-          <span class="tool">Salesforce</span><span class="tool">Comviva</span>
-          <span class="tool">Power BI</span><span class="tool">Tableau</span>
-          <span class="tool">Oracle</span><span class="tool">PeopleSoft</span>
-          <span class="tool">Microsoft 365</span><span class="tool">SharePoint</span>
-          <span class="tool">Moodle</span>
+      <div>
+        <div class="contact-item">
+          <span>Email</span>
+          <a href="mailto:ennia.hwatura@gmail.com">ennia.hwatura@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <span>LinkedIn</span>
+          <a href="https://www.linkedin.com/in/ennia-sharon-hwatura-93ab0339/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
         </div>
       </div>
     </div>
-  </section>
 
-  <section id="achievements">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label">Professional Impact</p>
-        <h2 class="section-title">Selected Career Achievements</h2>
-      </div>
-      <div class="achievement-grid">
-        <article class="achievement"><p>Managed a portfolio of more than 200 strategic retail and institutional clients and achieved 60% transaction volume growth within 12 months.</p></article>
-        <article class="achievement"><p>Supervised and supported a field network of 100 brand ambassadors, aligning activity with regional sales priorities and KPIs.</p></article>
-        <article class="achievement"><p>Coached 25 regional team leaders, strengthening customer centricity, sales performance and accountability.</p></article>
-        <article class="achievement"><p>Designed and delivered product, process and customer service training for employees and partner teams.</p></article>
-        <article class="achievement"><p>Used Power BI and business intelligence reporting to identify relationship health risks, commercial opportunities and performance trends.</p></article>
-        <article class="achievement"><p>Combined HR, sales, marketing and operations expertise to support business growth, compliance and service excellence.</p></article>
-      </div>
-    </div>
-  </section>
+    <p class="references-note">Professional references available upon request.</p>
+  </div>
+</section>
 
-  <section class="contact" id="contact">
-    <div class="container">
-      <div class="section-heading">
-        <p class="section-label">Let's Connect</p>
-        <h2 class="section-title">Building Better Business Outcomes Together</h2>
-        <p class="section-intro">Open to opportunities and professional conversations across business strategy, Human Resources, Sales and Marketing, Customer Experience, Training and Business Operations.</p>
-      </div>
-      <div class="contact-grid">
-        <div>
-          <div class="contact-item"><span>Location</span><p>Harare, Zimbabwe</p></div>
-          <div class="contact-item"><span>Telephone</span><a href="tel:+263772222078">+263 772 222 078</a></div>
-        </div>
-        <div>
-          <div class="contact-item"><span>Email</span><a href="mailto:ennia.hwatura@gmail.com">ennia.hwatura@gmail.com</a></div>
-          <div class="contact-item"><span>LinkedIn</span><a href="https://www.linkedin.com/in/ennia-sharon-hwatura-93ab0339/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a></div>
-        </div>
-      </div>
-      <p class="references-note">Professional references available upon request.</p>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -546,7 +652,8 @@
 </footer>
 
 <script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
 </body>
 </html>
